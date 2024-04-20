@@ -51,14 +51,27 @@ I2Cのサポートについては、@etoolsLab369さんのページが非常に�
 https://qiita.com/etoolsLab369/items/65befd8fe1cccd3afc33
 
 
-DS1307を使ったRTCモジュール
+＜DS1307を使ったRTCモジュール＞
 ![P 5](photo/P1020512.JPG)
 ![P 6](photo/P1020513.JPG)
 
-
-FT200XDを使ったUSB-UART接続モジュール
+AE-DS1307：　秋月電子通商で入手できます。<br>
+https://akizukidenshi.com/catalog/g/g115488/<br>
+<br>
+Tiny RTC modules：　amazon、その他有名webストアで入手できます。<br>
+説明書も何もありませんが、amazonに図面入りのレビューがありました。<br>
+<br>
+<br>
+＜FT200XDを使ったUSB-UART接続モジュール＞
 ![P 7](photo/P1020511.JPG)
 
+MFT200XD：　マルツのwebストアで入手できます。amazonからでも入手できます。<br>
+https://www.marutsu.co.jp/pc/i/243038/<br>
+<br>
+CJMCU-200：　amazon、その他有名webストアで入手できます。<br>
+説明書も何もありませんでしたが、問題なく使えました。<br>
+<br>
+<br>
 # ファームウェア
 @hanyazouさんが作成したZ80で動作しているCP/M-80のFWをベースに、<br>
 EMU8088_57Q用のFWとして動作するように修正を加えました。<br>
