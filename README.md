@@ -61,8 +61,8 @@ FWとして動作するように修正を加えました。<br>
 <br>
 (CPM-86)<br>
 --CPMDISKSディレクトリ<br>
-    CBIOS.BIN        BIOSバイナリファイル<br>
-    CCP_BDOS.BIN     CCP, BDOSバイナリファイル<br>
+　　　　CBIOS.BIN        BIOSバイナリファイル<br>
+　　　　CCP_BDOS.BIN     CCP, BDOSバイナリファイル<br>
     UMON_CPM.BIN     UNIMONのバイナリファイル<br>
     DRIVEA.DSK       Aドライブのディスクイメージ<br>
     DRIVEB.DSK       Bドライブのディスクイメージ<br>
