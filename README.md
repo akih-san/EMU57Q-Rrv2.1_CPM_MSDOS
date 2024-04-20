@@ -61,23 +61,23 @@ FWとして動作するように修正を加えました。<br>
 <br>
 (CPM-86)<br>
 --CPMDISKSディレクトリ<br>
-　　　　CBIOS.BIN        BIOSバイナリファイル<br>
-　　　　CCP_BDOS.BIN     CCP, BDOSバイナリファイル<br>
-    UMON_CPM.BIN     UNIMONのバイナリファイル<br>
-    DRIVEA.DSK       Aドライブのディスクイメージ<br>
-    DRIVEB.DSK       Bドライブのディスクイメージ<br>
-    DRIVEI.DSK       Iドライブのディスクイメージ<br>
-    DRIVEJ.DSK       Jドライブのディスクイメージ<br>
+　　CBIOS.BIN        BIOSバイナリファイル<br>
+　　CCP_BDOS.BIN     CCP, BDOSバイナリファイル<br>
+　　UMON_CPM.BIN     UNIMONのバイナリファイル<br>
+　　DRIVEA.DSK       Aドライブのディスクイメージ<br>
+　　DRIVEB.DSK       Bドライブのディスクイメージ<br>
+　　DRIVEI.DSK       Iドライブのディスクイメージ<br>
+　　DRIVEJ.DSK       Jドライブのディスクイメージ<br>
 <br>
 (MS-DOS)<br>
 --DOSDISKSディレクトリ<br>
-    IO.SYS           IOデバイスドライバのバイナリファイル<br>
-    MSDOS.SYS        MS-DOS本体のバイナリファイル<br>
-    UMON_DOS.BIN     UNIMONのバイナリファイル<br>
-    DRIVEA.DSK       Aドライブのディスクイメージ<br>
-    DRIVEB.DSK       Bドライブのディスクイメージ<br>
-    DRIVEC.DSK       Cドライブのディスクイメージ<br>
-    DRIVED.DSK       Dドライブのディスクイメージ<br>
+　　IO.SYS           IOデバイスドライバのバイナリファイル<br>
+　　MSDOS.SYS        MS-DOS本体のバイナリファイル<br>
+　　UMON_DOS.BIN     UNIMONのバイナリファイル<br>
+　　DRIVEA.DSK       Aドライブのディスクイメージ<br>
+　　DRIVEB.DSK       Bドライブのディスクイメージ<br>
+　　DRIVEC.DSK       Cドライブのディスクイメージ<br>
+　　DRIVED.DSK       Dドライブのディスクイメージ<br>
 <br>
 MS-DOS、CPM-86については、以下を参照してください。<br>
 <br>
