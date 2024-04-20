@@ -48,9 +48,9 @@ I2Cのサポートについては、@etoolsLab369さんのページが非常に�
 感謝いたします。<br>
 <br>
 （18F27Q43 2台を使ってHost-Client通信）<br>
-https://qiita.com/etoolsLab369/items/65befd8fe1cccd3afc33
-
-
+https://qiita.com/etoolsLab369/items/65befd8fe1cccd3afc33<br>
+<br>
+<br>
 ＜DS1307を使ったRTCモジュール＞
 ![P 5](photo/P1020512.JPG)
 ![P 6](photo/P1020513.JPG)
@@ -79,28 +79,28 @@ EMU8088_57Q用のFWとして動作するように修正を加えました。<br>
 <br>
 (CPM-86)<br>
 --CPMDISKSディレクトリ<br>
-　　CBIOS.BIN        BIOSバイナリファイル<br>
-　　CCP_BDOS.BIN     CCP, BDOSバイナリファイル<br>
-　　UMON_CPM.BIN     UNIMONのバイナリファイル<br>
-　　DRIVEA.DSK       Aドライブのディスクイメージ<br>
-　　DRIVEB.DSK       Bドライブのディスクイメージ<br>
-　　DRIVEI.DSK       Iドライブのディスクイメージ<br>
-　　DRIVEJ.DSK       Jドライブのディスクイメージ<br>
+　　CBIOS.BIN　　　　BIOSバイナリファイル<br>
+　　CCP_BDOS.BIN　　　CCP, BDOSバイナリファイル<br>
+　　UMON_CPM.BIN　　　UNIMONのバイナリファイル<br>
+　　DRIVEA.DSK　　　　Aドライブのディスクイメージ<br>
+　　DRIVEB.DSK　　　　Bドライブのディスクイメージ<br>
+　　DRIVEI.DSK　　　　Iドライブのディスクイメージ<br>
+　　DRIVEJ.DSK　　　　Jドライブのディスクイメージ<br>
 <br>
 (MS-DOS)<br>
 --DOSDISKSディレクトリ<br>
-　　IO.SYS           IOデバイスドライバのバイナリファイル<br>
-　　MSDOS.SYS        MS-DOS本体のバイナリファイル<br>
-　　UMON_DOS.BIN     UNIMONのバイナリファイル<br>
-　　DRIVEA.DSK       Aドライブのディスクイメージ<br>
-　　DRIVEB.DSK       Bドライブのディスクイメージ<br>
-　　DRIVEC.DSK       Cドライブのディスクイメージ<br>
-　　DRIVED.DSK       Dドライブのディスクイメージ<br>
+　　IO.SYS　　　　　　IOデバイスドライバのバイナリファイル<br>
+　　MSDOS.SYS　　　　MS-DOS本体のバイナリファイル<br>
+　　UMON_DOS.BIN　　　UNIMONのバイナリファイル<br>
+　　DRIVEA.DSK　　　　Aドライブのディスクイメージ<br>
+　　DRIVEB.DSK　　　　Bドライブのディスクイメージ<br>
+　　DRIVEC.DSK　　　　Cドライブのディスクイメージ<br>
+　　DRIVED.DSK　　　　Dドライブのディスクイメージ<br>
 <br>
 MS-DOS、CPM-86については、以下を参照してください。<br>
 <br>
-https://github.com/akih-san/EMU8088_57Q_V2_CPM86
-https://github.com/akih-san/EMU8088_MSDOS211
+https://github.com/akih-san/EMU8088_57Q_V2_CPM86<br>
+https://github.com/akih-san/EMU8088_MSDOS211<br>
 <br>
 <br>
 ＜＠hanyazouさんのソース＞<br>
