@@ -289,41 +289,42 @@ static void emu88_common_start_i88(void)
 	TRIS(I88_IOM) = 1;			// Set as input
 }
 
+// Address Bus
+//union address_bus_u {
+//    uint32_t w;             // 32 bits Address
+//    struct {
+//        uint8_t ll;        // Address L low
+//        uint8_t lh;        // Address L high
+//        uint8_t hl;        // Address H low
+//        uint8_t hh;        // Address H high
+//    };
+//};
 void write_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 {
     union address_bus_u ab;
     unsigned int i;
 
     ab.w = addr;
+	TRIS(I88_DATA) = 0x00;					// Set as output
+	i = 0;
 
-	// set SRAM read address
-	TRIS(I88_DATA) = 0x00;	// Set as output
+	while( i < len ) {
+		// set SRAM read address
+		LAT(I88_ADDR_H) = ab.lh;
+	    LAT(I88_ADDR_L) = ab.ll;
+		LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
+		LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
+		LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
+		LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
 
-	// set SRAM read address
-	LAT(I88_ADDR_H) = ab.lh;
-    LAT(I88_ADDR_L) = ab.ll;
-	LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
-	LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
-	LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
-	LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
-    for(i = 0; i < len; i++) {
         LAT(I88_WR) = 0;					// activate /WE
         LAT(I88_DATA) = ((uint8_t*)buf)[i];
         LAT(I88_WR) = 1;					// deactivate /WE
 
-    	LAT(I88_ADDR_L) = ++ab.ll;
-        if (ab.ll == 0) {
-		    LAT(I88_ADDR_H) = ++ab.lh;
-        	if (ab.lh == 0) {
-        		ab.hl++;
-        		LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
-				LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
-				LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
-				LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
-        	}
-        }
+		i++;
+		ab.w++;
     }
-	TRIS(I88_DATA) = 0xff;	// Set as input
+	TRIS(I88_DATA) = 0xff;					// Set as input
 }
 
 void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
@@ -333,34 +334,22 @@ void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 
 	ab.w = addr;
 
-	LAT(I88_RD) = 0;      // activate /OE
+	LAT(I88_RD) = 0;						// activate /OE
+	i = 0;
+	while( i < len ) {
+		LAT(I88_ADDR_H) = ab.lh;
+		 LAT(I88_ADDR_L) = ab.ll;
+		LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
+		LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
+		LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
+		LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
 
-	// set SRAM read address
-	LAT(I88_ADDR_H) = ab.lh;
-    LAT(I88_ADDR_L) = ab.ll;
-	LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
-	LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
-	LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
-	LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
-
-	for(i = 0; i < len; i++) {
-        ((uint8_t*)buf)[i] = PORT(I88_DATA);	// read data
-
-		LAT(I88_ADDR_L) = ++ab.ll;
-        if (ab.ll == 0) {
-		    LAT(I88_ADDR_H) = ++ab.lh;
-        	if (ab.lh == 0) {
-        		ab.hl++;
-				LAT(I88_A16) = (ab.hl & 0x01) ? 1 : 0;
-				LAT(I88_A17) = (ab.hl & 0x02) ? 1 : 0;
-				LAT(I88_A18) = (ab.hl & 0x04) ? 1 : 0;
-				LAT(I88_A19) = (ab.hl & 0x08) ? 1 : 0;
-        	}
-        }
+		ab.w++;									// Ensure bus data setup time from HiZ to valid data
+		((uint8_t*)buf)[i] = PORT(I88_DATA);	// read data
+		i++;
     }
 
-	LAT(I88_RD) = 1;      // deactivate /OE
-
+	LAT(I88_RD) = 1;						// deactivate /OE
 }
 
 static void emu88_common_wait_for_programmer()
