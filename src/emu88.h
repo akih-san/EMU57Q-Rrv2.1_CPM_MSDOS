@@ -32,7 +32,7 @@
 // Configlations
 //
 
-#define CLK8M
+//#define CLK8M
 #define CPM		1
 #define MSDOS	2
 
