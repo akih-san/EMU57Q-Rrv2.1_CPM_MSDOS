@@ -30148,40 +30148,31 @@ static void emu88_common_start_i88(void)
     TRISC1 = 1;
  TRISC0 = 1;
 }
-
+# 302 "../src/boards/emu88_common.c"
 void write_sram(uint32_t addr, uint8_t *buf, unsigned int len)
 {
     union address_bus_u ab;
     unsigned int i;
 
     ab.w = addr;
-
-
  TRISB = 0x00;
+ i = 0;
 
+ while( i < len ) {
 
- LATF = ab.lh;
-    LATD = ab.ll;
- LATA0 = (ab.hl & 0x01) ? 1 : 0;
- LATA1 = (ab.hl & 0x02) ? 1 : 0;
- LATA2 = (ab.hl & 0x04) ? 1 : 0;
- LATA3 = (ab.hl & 0x08) ? 1 : 0;
-    for(i = 0; i < len; i++) {
+  LATF = ab.lh;
+     LATD = ab.ll;
+  LATA0 = (ab.hl & 0x01) ? 1 : 0;
+  LATA1 = (ab.hl & 0x02) ? 1 : 0;
+  LATA2 = (ab.hl & 0x04) ? 1 : 0;
+  LATA3 = (ab.hl & 0x08) ? 1 : 0;
+
         LATC1 = 0;
         LATB = ((uint8_t*)buf)[i];
         LATC1 = 1;
 
-     LATD = ++ab.ll;
-        if (ab.ll == 0) {
-      LATF = ++ab.lh;
-         if (ab.lh == 0) {
-          ab.hl++;
-          LATA0 = (ab.hl & 0x01) ? 1 : 0;
-    LATA1 = (ab.hl & 0x02) ? 1 : 0;
-    LATA2 = (ab.hl & 0x04) ? 1 : 0;
-    LATA3 = (ab.hl & 0x08) ? 1 : 0;
-         }
-        }
+  i++;
+  ab.w++;
     }
  TRISB = 0xff;
 }
@@ -30194,33 +30185,21 @@ void read_sram(uint32_t addr, uint8_t *buf, unsigned int len)
  ab.w = addr;
 
  LATC2 = 0;
+ i = 0;
+ while( i < len ) {
+  LATF = ab.lh;
+   LATD = ab.ll;
+  LATA0 = (ab.hl & 0x01) ? 1 : 0;
+  LATA1 = (ab.hl & 0x02) ? 1 : 0;
+  LATA2 = (ab.hl & 0x04) ? 1 : 0;
+  LATA3 = (ab.hl & 0x08) ? 1 : 0;
 
-
- LATF = ab.lh;
-    LATD = ab.ll;
- LATA0 = (ab.hl & 0x01) ? 1 : 0;
- LATA1 = (ab.hl & 0x02) ? 1 : 0;
- LATA2 = (ab.hl & 0x04) ? 1 : 0;
- LATA3 = (ab.hl & 0x08) ? 1 : 0;
-
- for(i = 0; i < len; i++) {
-        ((uint8_t*)buf)[i] = PORTB;
-
-  LATD = ++ab.ll;
-        if (ab.ll == 0) {
-      LATF = ++ab.lh;
-         if (ab.lh == 0) {
-          ab.hl++;
-    LATA0 = (ab.hl & 0x01) ? 1 : 0;
-    LATA1 = (ab.hl & 0x02) ? 1 : 0;
-    LATA2 = (ab.hl & 0x04) ? 1 : 0;
-    LATA3 = (ab.hl & 0x08) ? 1 : 0;
-         }
-        }
+  ab.w++;
+  ((uint8_t*)buf)[i] = PORTB;
+  i++;
     }
 
  LATC2 = 1;
-
 }
 
 static void emu88_common_wait_for_programmer()
@@ -30344,14 +30323,14 @@ void sys_init()
  PWM1GIE = 0x00;
 
 
- PWM1PR = 0x0007;
- PWM1S1P1 = 0x0003;
- PWM1S1P2 = 0x0005;
 
 
 
 
 
+ PWM1PR = 0x000C;
+ PWM1S1P1 = 0x0005;
+ PWM1S1P2 = 0x0008;
 
  PWM1S1CFG = 0x00;
  PWM1CON = 0x84;

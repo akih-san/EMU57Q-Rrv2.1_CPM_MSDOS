@@ -307,11 +307,11 @@ RES_PARERR 4
 [v _emu88_common_sys_init emu88_common_sys_init `(v  1 s 1 emu88_common_sys_init ]
 "272
 [v _emu88_common_start_i88 emu88_common_start_i88 `(v  1 s 1 emu88_common_start_i88 ]
-"292
+"302
 [v _write_sram write_sram `(v  1 e 1 0 ]
-"329
+"330
 [v _read_sram read_sram `(v  1 e 1 0 ]
-"366
+"355
 [v _emu88_common_wait_for_programmer emu88_common_wait_for_programmer `(v  1 s 1 emu88_common_wait_for_programmer ]
 "69 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/EMU88RAM.c
 [v _sys_init sys_init `(v  1 e 1 0 ]
@@ -1163,10 +1163,10 @@ RES_PARERR 4
 [v sys_init@retry retry `i  1 s 2 retry ]
 "242
 } 0
-"366 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
+"355 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
 [v _emu88_common_wait_for_programmer emu88_common_wait_for_programmer `(v  1 s 1 emu88_common_wait_for_programmer ]
 {
-"377
+"366
 } 0
 "194
 [v _emu88_common_sys_init emu88_common_sys_init `(v  1 s 1 emu88_common_sys_init ]
@@ -2500,20 +2500,20 @@ RES_PARERR 4
 [v unimon_console@buf buf `*.39uc  1 a 2 118 ]
 "191
 } 0
-"329 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
+"330 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
 [v _read_sram read_sram `(v  1 e 1 0 ]
 {
 [s S100 . 4 `uc 1 ll 1 0 `uc 1 lh 1 1 `uc 1 hl 1 2 `uc 1 hh 1 3 ]
-"331
+"332
 [u S105 address_bus_u 4 `ul 1 w 4 0 `S100 1 . 4 0 ]
 [v read_sram@ab ab `S105  1 a 4 26 ]
-"332
+"333
 [v read_sram@i i `ui  1 a 2 24 ]
-"329
+"330
 [v read_sram@addr addr `ul  1 p 4 16 ]
 [v read_sram@buf buf `*.39uc  1 p 2 20 ]
 [v read_sram@len len `ui  1 p 2 22 ]
-"364
+"353
 } 0
 "378 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/EMU88RAM.c
 [v _nmi_sig_off nmi_sig_off `(v  1 e 1 0 ]
@@ -2548,20 +2548,20 @@ RES_PARERR 4
 [v read_sector@fres fres `E17186  1 a 1 190 ]
 "141
 } 0
-"292 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
+"302 Z:\8088\EMU8088_RAM\picfw_R2.1/src/boards/emu88_common.c
 [v _write_sram write_sram `(v  1 e 1 0 ]
 {
 [s S100 . 4 `uc 1 ll 1 0 `uc 1 lh 1 1 `uc 1 hl 1 2 `uc 1 hh 1 3 ]
-"294
+"304
 [u S105 address_bus_u 4 `ul 1 w 4 0 `S100 1 . 4 0 ]
 [v write_sram@ab ab `S105  1 a 4 26 ]
-"295
+"305
 [v write_sram@i i `ui  1 a 2 24 ]
-"292
+"302
 [v write_sram@addr addr `ul  1 p 4 16 ]
 [v write_sram@buf buf `*.39uc  1 p 2 20 ]
 [v write_sram@len len `ui  1 p 2 22 ]
-"327
+"328
 } 0
 "78 Z:\8088\EMU8088_RAM\picfw_R2.1/drivers/utils.c
 [v _util_hexdump_sum util_hexdump_sum `(v  1 e 1 0 ]
