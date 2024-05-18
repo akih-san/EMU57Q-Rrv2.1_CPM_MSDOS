@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o
+ C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o
  -Odist/default/production\R2.1.X.production.hex
  -logfile=dist/default/production\R2.1.X.production.hxl
  -addressing=1
@@ -9,23 +9,23 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
-  8h - 105h		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
-  F600h - 1F5FDh		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
-  1F600h - 1FDC5h		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
-  300000h - 300007h		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
-  300009h - 300009h		(C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
+  8h - 105h		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
+  F600h - 1F605h		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
+  1F608h - 1FDCDh		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
+  300000h - 300007h		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
+  300009h - 300009h		(C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   106h - F5FFh
-  1F5FEh - 1F5FFh
-  1FDC6h - 2FFFFFh
+  1F606h - 1F607h
+  1FDCEh - 2FFFFFh
   300008h - 300008h
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\akihito\AppData\Local\Temp\xcAsid4.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\akihi\AppData\Local\Temp\xcAs3hg.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -4142,8 +4142,8 @@
 0001F5C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001F5D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001F5E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-0001F5F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
-0001F600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0001F5F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0001F600 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
 0001F610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001F620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001F630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -4267,7 +4267,7 @@
 0001FD90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001FDA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0001FDB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-0001FDC0 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+0001FDC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- H1 -- -- -- -- -- --
 00300010 | --

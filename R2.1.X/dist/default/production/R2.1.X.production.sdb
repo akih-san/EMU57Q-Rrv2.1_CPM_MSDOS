@@ -351,7 +351,7 @@ RES_PARERR 4
 [v _disk_init disk_init `(i  1 s 2 disk_init ]
 "221
 [v _chk_os chk_os `(i  1 s 2 chk_os ]
-"279
+"280
 [v _open_dskimg open_dskimg `(i  1 s 2 open_dskimg ]
 "23 Z:\8088\EMU8088_RAM\picfw_R2.1/src/I2C_IO.c
 [v _I2C1_Init I2C1_Init `(v  1 e 1 0 ]
@@ -384,7 +384,7 @@ RES_PARERR 4
 "151
 [v _dsk_err dsk_err `(v  1 s 1 dsk_err ]
 "155
-[v _unimon_console unimon_console `(v  1 e 1 0 ]
+[v _unimon_console unimon_console `(v  1 s 1 unimon_console ]
 "211
 [v _cpm_bus_master_operation cpm_bus_master_operation `(v  1 e 1 0 ]
 "112 Z:\8088\EMU8088_RAM\picfw_R2.1/src/io_dos.c
@@ -647,7 +647,7 @@ RES_PARERR 4
 [v _aux_device aux_device `*.38(v  1 s 3 aux_device ]
 "21 Z:\8088\EMU8088_RAM\picfw_R2.1/src/memory.c
 [v _mem_size mem_size `ul  1 e 4 0 ]
-"3338 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8\pic\include\proc\pic18f57q43.h
+"3338 C:/Users/akihi/.mchp_packs/Microchip/PIC18F-Q_DFP/1.25.433/xc8\pic\include\proc\pic18f57q43.h
 [v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
 "3408
 [v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
@@ -1377,18 +1377,18 @@ RES_PARERR 4
 {
 "75
 } 0
-"279 Z:\8088\EMU8088_RAM\picfw_R2.1/src/emu88_main.c
+"280 Z:\8088\EMU8088_RAM\picfw_R2.1/src/emu88_main.c
 [v _open_dskimg open_dskimg `(i  1 s 2 open_dskimg ]
 {
-"286
+"287
 [v open_dskimg@buf buf `C*.39uc  1 a 2 221 ]
-"285
+"286
 [v open_dskimg@drive_letter drive_letter `uc  1 a 1 223 ]
-"282
+"283
 [v open_dskimg@drv drv `us  1 a 2 226 ]
-"281
+"282
 [v open_dskimg@num_files num_files `i  1 a 2 224 ]
-"304
+"305
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -1532,7 +1532,7 @@ RES_PARERR 4
 [v chk_os@selection selection `i  1 a 2 211 ]
 "224
 [v chk_os@c c `uc  1 a 1 213 ]
-"273
+"274
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -1905,7 +1905,7 @@ RES_PARERR 4
 [v cpm_bus_master_operation@cnt cnt `us  1 a 2 197 ]
 "213
 [v cpm_bus_master_operation@buf buf `*.39uc  1 a 2 195 ]
-"278
+"276
 } 0
 "817 Z:\8088\EMU8088_RAM\picfw_R2.1/src/io_dos.c
 [v _dos_bus_master_operation dos_bus_master_operation `(v  1 e 1 0 ]
@@ -2492,7 +2492,7 @@ RES_PARERR 4
 "51
 } 0
 "155 Z:\8088\EMU8088_RAM\picfw_R2.1/src/io_cpm.c
-[v _unimon_console unimon_console `(v  1 e 1 0 ]
+[v _unimon_console unimon_console `(v  1 s 1 unimon_console ]
 {
 "158
 [v unimon_console@cnt cnt `us  1 a 2 120 ]
