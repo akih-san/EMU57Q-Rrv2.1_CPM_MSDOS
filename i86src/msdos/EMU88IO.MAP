@@ -1,0 +1,5 @@
+LINK : warning L4021: no stack segment
+
+ Start  Stop   Length Name                   Class
+ 00000H 001DEH 001DFH CODE                   
+ 001E0H 009C0H 007E1H SYSINITSEG             SYSTEM_INIT

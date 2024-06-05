@@ -89,7 +89,7 @@ MNI_LEDOFF	equ	05h	; NMI signal off request command
 
 ; ------------------OFFSET = 0
 UREQ_COM	db	0		; unimon CONIN/CONOUT request command
-					; return : operation done MSB bit = 1 
+					; return : operation done to 0 
 UNI_CHR		db	0		; charcter (CONIN/CONOUT) or counts(STROUT)
 STR_OFF		dw	0		; string offset
 STR_SEG		dw	0		; string segment
@@ -1481,7 +1481,7 @@ wait_stout:
 CONIN:
 	mov	cs:[UREQ_COM], REQ_CONIN	; set CONIN request
 CON_REQ:
-	out	DUMMY_PORT, al			; make IO/M = 1 then invoke PIC F/W
+	in	al, DUMMY_PORT			; make IO/M = 1 then invoke PIC F/W
 wait_conin:
 	mov	al, cs:[UREQ_COM]
 	or	al, al

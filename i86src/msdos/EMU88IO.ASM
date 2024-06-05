@@ -255,7 +255,7 @@ ENTRY:  PUSH    AX              ;Save all nessacary registers.
 	and	ax, 1111111011111111b	; clear done bit
 	mov	[si.STATUS],ax
 
-	out	PIC_IO, al		; invoke PIC F/W
+	in	al, PIC_IO		; invoke PIC F/W
 					; out port address and data is DUMMY!
 wait_done:
 	mov	ax,[si.STATUS]

@@ -1,4 +1,5 @@
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-1
 
 
@@ -46,7 +47,8 @@ IO.SYS for the EMU8088/V20                                  Page     1-1
 				EXTRN   DEFAULT_DRIVE:BYTE            ;Default Drive to use when system booted
 				EXTRN   BUFFERS:BYTE                  ;Number of default buffers.
 				
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-2
 
 
@@ -60,7 +62,8 @@ IO.SYS for the EMU8088/V20                                  Page     1-2
 				
  0000  E9 01AC R		INIT:   JMP     HWINIT
 				
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-3
 Cold start jump                                             
 
@@ -126,7 +129,8 @@ Cold start jump
 	   ??			
 			 ]	
  0030  0000			
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-4
 BOOT sector definition                                      
 
@@ -172,7 +176,8 @@ BOOT sector definition
  0071  0000			
 				
 				
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-5
 BOOT sector definition                                      
 
@@ -238,7 +243,8 @@ BOOT sector definition
        20 20			
 				
  00A9				TIMDEV:                         ;Header for device CLOCK
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-6
 Device driver tables.                                       
 
@@ -260,7 +266,8 @@ Device driver tables.
 			 ]	
 				
 				
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-7
 Device driver tables.                                       
 
@@ -326,7 +333,8 @@ Device driver tables.
  00F8  EB 13 90				jmp	ENTRY
 				
  00FB				TIM_INT:
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-8
 Strategy and Software Interrupt routines.                   
 
@@ -363,7 +371,7 @@ Strategy and Software Interrupt routines.
  0127  25 FEFF				and	ax, 1111111011111111b	; clear done bit
  012A  89 44 03				mov	[si.STATUS],ax
 				
- 012D  E6 00				out	PIC_IO, al		; invoke PIC F/W
+ 012D  E4 00				in	al, PIC_IO		; invoke PIC F/W
 									; out port address and data is DUMMY!
  012F				wait_done:
  012F  8B 44 03				mov	ax,[si.STATUS]
@@ -391,7 +399,8 @@ Strategy and Software Interrupt routines.
 				
 				
 				
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Page     1-9
 Strategy and Software Interrupt routines.                   
 
@@ -437,7 +446,8 @@ Strategy and Software Interrupt routines.
  01DF				CODE    ENDS
 				
 				        END
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Symbols-1
 
 
@@ -503,7 +513,8 @@ DSKC . . . . . . . . . . . . . .  	L 	003F	CODE
 DSKD . . . . . . . . . . . . . .  	L 	0059	CODE
 DSKDEV . . . . . . . . . . . . .  	L NEAR	00BB	CODE
 DSK_INT  . . . . . . . . . . . .  	L NEAR	0109	CODE
-Microsoft (R) Macro Assembler Version 5.10A                 2/13/24 16:56:36
+Microsoft (R) Macro Assembler Version 5.10A                 6/5/24 22:29:16
+
 IO.SYS for the EMU8088/V20                                  Symbols-2
 
 
@@ -556,7 +567,7 @@ WRKSTK . . . . . . . . . . . . .  	L WORD	0148	CODE
     559 Total   Lines
      76 Symbols
 
-  44206 Bytes symbol space free
+  44264 + 518609 Bytes symbol space free
 
       0 Warning Errors
       0 Severe  Errors

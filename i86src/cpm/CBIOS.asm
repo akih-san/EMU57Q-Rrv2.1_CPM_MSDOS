@@ -199,7 +199,7 @@ CONIN:
 	pop	dx
 	mov	byte ptr es:[CREQ_COM], REQ_CONIN	; set CONIN request
 CON_REQ:
-	out	DUMMY_PORT, al			; make IO/M = 1 then invoke PIC F/W
+	in	al, DUMMY_PORT			; make IO/M = 1 then invoke PIC F/W
 wait_conin:
 	mov	al, es:[CREQ_COM]
 	or	al, al

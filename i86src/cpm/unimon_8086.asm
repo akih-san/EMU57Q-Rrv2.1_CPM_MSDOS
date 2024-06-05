@@ -1478,7 +1478,7 @@ wait_stout:
 CONIN:
 	mov	cs:[UREQ_COM], REQ_CONIN	; set CONIN request
 CON_REQ:
-	out	DUMMY_PORT, al			; make IO/M = 1 then invoke PIC F/W
+	in	al, DUMMY_PORT			; make IO/M = 1 then invoke PIC F/W
 wait_conin:
 	mov	al, cs:[UREQ_COM]
 	or	al, al
