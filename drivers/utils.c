@@ -134,6 +134,7 @@ uint16_t days_from_1980(uint16_t year, uint16_t month, uint16_t day) {
 	uint16_t d1, d2;
 	
 	d1 = leaps(year);
+	if ( month == 2 && day == 29 ) d1--;
 	d2 = jan_to_days(month, day);
 	if (d2 <= 59 && chk_leap( year ) ) d1--;	// except d2 <= 2/28 && year == leap year
 
